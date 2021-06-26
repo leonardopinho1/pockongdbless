@@ -207,10 +207,6 @@ Pronto! Finalizamos essa POC com todos os objetivos atingidos.
 
 A documentação de Kong pode ser encontrada em [https://docs.konghq.com/][kong-docs-url].
 
-### Problemas
-
-Se você tiver problemas ou perguntas sobre esta POC favor entrar em contato com Leonardo Pinho 11 93466-6775
-
 ##DOCS adicionais
 
 [kong-site-url]: https://konghq.com/
