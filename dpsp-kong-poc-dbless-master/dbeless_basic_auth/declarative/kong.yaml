@@ -1,0 +1,37 @@
+_format_version: "2.1"
+_transform: true
+
+services:
+- connect_timeout: 60000
+  host: mocktarget.apigee.net
+  name: mock
+  port: 443
+  protocol: https
+  read_timeout: 60000
+  retries: 3  
+  write_timeout: 60000
+  routes:
+  - name: routemock
+    paths:
+    - /mock
+    path_handling: v1
+    preserve_host: true
+    protocols:
+    - http
+    - https
+    regex_priority: 0
+    strip_path: true
+    https_redirect_status_code: 426
+  plugins:
+  - name: basic-auth
+    route:
+    config: 
+      hide_credentials: true
+consumers:
+- username: leo_arch
+  custom_id: SOME_CUSTOM_ID 
+
+basicauth_credentials:
+- consumer: leo_arch
+  username: leo
+  password: leo_123_asdf*
